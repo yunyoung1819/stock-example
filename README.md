@@ -38,7 +38,7 @@ mysql 데이터베이스 생성
 |                                                 | {id: 1, quantity: 4} | update set quantity = 4 from stock where id = 1 |
 
 
-## 3. v1. Synchronized 이용하기
+## 3. Synchronized 이용하기
 - Synchronized를 사용했을 때 발생할 수 있는 문제점
   - 자바의 synchronized는 하나의 프로세스 안에서만 보장이 된다.
   - 서버가 1대일때는 데어터의 접근을 서버가 1대만 해서 괜찮겠지만 서버가 2대 또는 그 이상일 경우에는 데이터의 접근을 여러 서버에서 할 수 있게 된다.
