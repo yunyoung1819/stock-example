@@ -79,5 +79,30 @@ mysql 데이터베이스 생성
 - 트랜잭션이 종료될 때 자동으로 해제되지 않기에 별도의 명령어로 해제하거나 선점 시간이 끝나야 해제
 - MySQL에서는 get_lock이라는 명령어로 lock을 획득하고 release라는 명령어로 lock을 해제
 
+
+## 5. Redis 이용해보기
+- Lettuce
+  - setnx 명령어를 활용하여 분산락 구현
+  - spin lock 방식
+
+![](./images/redis-lettuce.png)
+
+- Redisson
+  - pub-sub 기반으로 Lock 구현 제공
+
+![](./images/redisson.png)
+
+### redis 작업 환경 세팅
+
+- docker pull redis
+- docker run --name myredis -d -p 6379:6379 redis
+
+### build.gradle에 의존성 추가
+```
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	...
+}
+```
 ### 출처
 - [인프런] 재고시스템으로 알아보는 동시성 이슈 해결 방법 강의
