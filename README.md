@@ -64,16 +64,16 @@ mysql 데이터베이스 생성
 
 ### Pessimistic Lock
 
-![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/images/%EB%B9%84%EA%B4%80%EC%A0%81%EB%9D%BD.png)
+![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95%20(%E5%AE%8C)/images/%EB%B9%84%EA%B4%80%EC%A0%81%EB%9D%BD.png)
 - 실제로 데이터에 Lock을 걸어서 정합성을 맞추는 방법
 - Spring Data JPA에서는 @Lock(LockModeType.PESSIMISTIC_WRITE)를 이용
 
 ### Optimistic Lock
-![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/images/optimisticlock.png)
+![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95%20(%E5%AE%8C)/images/optimisticlock.png)
 - Optimistic Lock은 실제로 `Lock`을 이옹하지 않고 `버전`을 이용함으로써 정합성을 맞추는 방법
 
 ### Named Lock
-![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/images/namedlock.png)
+![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95%20(%E5%AE%8C)/images/namedlock.png)
 - 이름을 가진 meta data lock 이다.
 - 이름을 가진 lock을 획득한 후 해제할 때까지 다른 세션은 이 락을 획득할 수 없음
 - 트랜잭션이 종료될 때 자동으로 해제되지 않기에 별도의 명령어로 해제하거나 선점 시간이 끝나야 해제
