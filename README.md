@@ -85,12 +85,12 @@ mysql 데이터베이스 생성
   - setnx 명령어를 활용하여 분산락 구현
   - spin lock 방식
 
-![](./images/redis-lettuce.png)
+![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95%20(%E5%AE%8C)/images/redis-lettuce.png)
 
 - Redisson
   - pub-sub 기반으로 Lock 구현 제공
 
-![](./images/redisson.png)
+![](https://github.com/yunyoung1819/TIL/blob/master/%EC%9E%AC%EA%B3%A0%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%B3%B4%EB%8A%94%20%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95%20(%E5%AE%8C)/images/redisson.png)
 
 ### redis 작업 환경 세팅
 
