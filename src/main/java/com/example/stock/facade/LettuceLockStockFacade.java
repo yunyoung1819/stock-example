@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class LettuceLockStockFacade {
 
 	private final RedisLockRepository redisLockRepository;
-
 	private final StockService stockService;
 
 	public LettuceLockStockFacade(RedisLockRepository redisLockRepository, StockService stockService) {
